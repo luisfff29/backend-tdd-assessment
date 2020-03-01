@@ -22,6 +22,9 @@ class TestEcho(unittest.TestCase):
 
         self.assertEquals(stdout, usage)
 
+    def test_upper_1(self):
+        self.assertEqual(echo.func_upper('hello'), 'HELLO')
+
 
 if __name__ == '__main__':
     unittest.main()

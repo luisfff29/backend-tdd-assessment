@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """An enhanced version of the 'echo' cmd line utility"""
 
-__author__ = "luisfff"
+__author__ = "luisfff29"
 
 import sys
 import argparse
@@ -22,15 +22,18 @@ def create_parser():
     return parser
 
 
-def func_lower(text):
-    return text.lower()
-
-
 def func_upper(text):
+    """convert text to uppercase"""
     return text.upper()
 
 
+def func_lower(text):
+    """convert text to lowercase"""
+    return text.lower()
+
+
 def func_title(text):
+    """convert text to titlecase"""
     return text.title()
 
 
@@ -43,6 +46,9 @@ def main():
     if not args:
         parser.print_usage()
         sys.exit(1)
+
+    if args.upper:
+        print(func_upper(args.text))
 
 
 if __name__ == '__main__':
