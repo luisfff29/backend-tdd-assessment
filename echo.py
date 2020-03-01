@@ -4,7 +4,6 @@
 
 __author__ = "luisfff"
 
-
 import sys
 import argparse
 
@@ -40,6 +39,10 @@ def main():
     parser = create_parser()
     args = parser.parse_args()
     print(args)
+
+    if not args:
+        parser.print_usage()
+        sys.exit(1)
 
 
 if __name__ == '__main__':
