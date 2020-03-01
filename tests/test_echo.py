@@ -25,6 +25,9 @@ class TestEcho(unittest.TestCase):
     def test_upper_1(self):
         self.assertEqual(echo.func_upper('hello'), 'HELLO')
 
+    def test_lower_1(self):
+        self.assertEqual(echo.func_lower('Hello'), 'hello')
+
 
 if __name__ == '__main__':
     unittest.main()

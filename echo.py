@@ -50,6 +50,9 @@ def main():
     if args.upper:
         print(func_upper(args.text))
 
+    if args.lower:
+        print(func_lower(args.text))
+
 
 if __name__ == '__main__':
     main()
