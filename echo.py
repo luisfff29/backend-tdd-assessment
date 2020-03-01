@@ -11,13 +11,17 @@ import argparse
 
 def create_parser():
     """Creates and returns an argparse cmd line option parser"""
-    pass
+    parser = argparse.ArgumentParser(
+        description='Perform transformation on input text.')
+    return parser
 
 
-def main(args):
+def main():
     """Implementation of echo"""
-    pass
+    parser = create_parser()
+    print(parser.parse_args())
+    print()
 
 
 if __name__ == '__main__':
-    pass
+    main()
