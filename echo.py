@@ -23,11 +23,23 @@ def create_parser():
     return parser
 
 
+def func_lower(text):
+    return text.lower()
+
+
+def func_upper(text):
+    return text.upper()
+
+
+def func_title(text):
+    return text.title()
+
+
 def main():
     """Implementation of echo"""
     parser = create_parser()
-    print(parser.parse_args())
-    print()
+    args = parser.parse_args()
+    print(args)
 
 
 if __name__ == '__main__':
