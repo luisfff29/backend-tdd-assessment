@@ -6,6 +6,7 @@ __author__ = "luisfff29"
 
 import sys
 import argparse
+import subprocess
 
 
 def create_parser():
@@ -35,6 +36,11 @@ def func_lower(text):
 def func_title(text):
     """convert text to titlecase"""
     return text.title()
+
+
+def func_no_args(text):
+    output = subprocess.check_output(['python', 'echo.py', text])
+    return output.rstrip()
 
 
 def main():

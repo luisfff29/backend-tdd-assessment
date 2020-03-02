@@ -57,6 +57,9 @@ class TestEcho(unittest.TestCase):
                 continue
             self.assertEqual(output.rstrip(), 'Hello!')
 
+    def test_no_args_1(self):
+        self.assertEqual(echo.func_no_args('hElLo'), 'hElLo')
+
 
 if __name__ == '__main__':
     unittest.main()
