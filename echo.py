@@ -41,20 +41,22 @@ def main():
     """Implementation of echo"""
     parser = create_parser()
     args = parser.parse_args()
-    print(args)
 
     if not args:
         parser.print_usage()
         sys.exit(1)
 
+    result = args.text
     if args.upper:
-        print(func_upper(args.text))
+        result = func_upper(args.text)
 
     if args.lower:
-        print(func_lower(args.text))
+        result = func_lower(args.text)
 
     if args.title:
-        print(func_title(args.text))
+        result = func_title(args.text)
+
+    print(result)
 
 
 if __name__ == '__main__':
